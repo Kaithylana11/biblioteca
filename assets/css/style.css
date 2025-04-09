@@ -1,0 +1,193 @@
+/* Zera margens, preenchimentos e define o modelo de box para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #004d95; /* Fundo azul escuro */
+    color: #333;
+    padding: 20px;
+}
+
+/* Container centralizado com fundo branco */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+/* Título principal */
+h1 {
+    color: #004d95;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulário de busca */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #004d95;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.search-form button, .button {
+    padding: 10px 20px;
+    background-color: #ff9a00; /* Laranja */
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #e98b00;
+}
+
+/* Botão de adicionar livro */
+.btn-adicionar {
+    display: inline-block;
+    background-color: #004d95;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-adicionar:hover {
+    background-color: #003b73;
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #004d95;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background-color: #003a70;
+}
+
+/* Ações da tabela (ícones editar/excluir) */
+td.acoes, th.acoes {
+    text-align: center;
+    width: 100px;
+}
+
+td.acoes a {
+    display: inline-block;
+    margin: 0 4px;
+    font-size: 20px;
+}
+
+/* Formulário de adicionar/editar livro */
+form.adicionar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form.adicionar-form label {
+    font-weight: bold;
+    color: #004d95;
+}
+
+form.adicionar-form input[type="text"],
+form.adicionar-form input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+form.adicionar-form input[type="text"]:focus,
+form.adicionar-form input[type="number"]:focus {
+    border-color: #004d95;
+    outline: none;
+}
+
+form.adicionar-form button {
+    padding: 12px;
+    background-color: #ff9a00;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: fit-content;
+    font-weight: bold;
+}
+
+form.adicionar-form button:hover {
+    background-color: #e98b00;
+}
+
+/* Tabela com lista de livros */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #004d95;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para links (ícones e botões pequenos) */
+a {
+    text-decoration: none;
+    color: #004d95;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Capa do livro */
+.livro-capa {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Centraliza a capa na célula da tabela */
+table td.capa-cell {
+    text-align: center;
+}
